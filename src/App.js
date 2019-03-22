@@ -1,25 +1,20 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Clock from './component/clock/clock';
+import Tabs from './component/tabs/tabs';
 
 class App extends Component {
+  
   render() {
+    const titles = ['1a', '2a', '3a', '4a', '5a'];
+    const contents = ["coke", "sprite", "beer", "wine", "pizza"];
+
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div>
+        <Clock />
+        <Tabs
+          titles={titles}
+          contents={contents}
+        />
       </div>
     );
   }
